@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domaine Mqam Tolba — Muscat d'Italie | Raisin de Table Premium</title>
-  <meta name="description" content="Producteur de raisin de table Muscat d'Italie — muscat.ma. ~10 tonnes août–septembre. Tiflet, Région Rabat, Maroc. Export Europe & Afrique.">
+  <title>Domaine Mqam Tolba — Italia (Muscat) | Raisin de Table Premium</title>
+  <meta name="description" content="Producteur de raisin de table Italia (Muscat) — muscat.ma. ~10 tonnes août–septembre. Tiflet, Région Rabat, Maroc. Export Europe & Afrique.">
+  <meta name="description" lang="en" content="Premium Italia (Muscat) table grapes — muscat.ma. ~10 tonnes available August–September. Tiflet, Rabat Region, Morocco. Export to Europe & Africa.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --gold: #C9A84C;
@@ -24,7 +25,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -33,6 +33,28 @@
       color: var(--text-dark);
       overflow-x: hidden;
     }
+
+    /* Arabic font for AR content */
+    .lang-ar [data-lang-inline="ar"],
+    .lang-ar [data-lang="ar"],
+    .lang-ar [data-lang="ar"] * {
+      font-family: 'Noto Naskh Arabic', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    /* RTL layout when Arabic is active */
+    .lang-ar { direction: rtl; }
+    /* Lang bar always stays top-right regardless of locale */
+    .lang-bar { right: 0 !important; left: auto !important; border-bottom-left-radius: 12px !important; border-bottom-right-radius: 0 !important; }
+    .lang-ar .about-grid { direction: rtl; }
+    .lang-ar .contact-detail { direction: rtl; }
+    .lang-ar .commercial-list li { direction: rtl; }
+    .lang-ar .hero-eyebrow,
+    .lang-ar .hero-title,
+    .lang-ar .hero-subtitle { direction: rtl; font-family: 'Noto Naskh Arabic', serif; }
+    .lang-ar .section-title,
+    .lang-ar .section-label { font-family: 'Noto Naskh Arabic', serif; }
 
     /* ── LANGUAGE TOGGLE ── */
     .lang-bar {
@@ -77,7 +99,6 @@
       padding: 80px 24px 60px;
       overflow: hidden;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -88,8 +109,6 @@
         radial-gradient(ellipse 40% 40% at 80% 30%, rgba(61,107,61,0.2) 0%, transparent 60%);
       pointer-events: none;
     }
-
-    /* Decorative vine circles */
     .hero-deco {
       position: absolute;
       border-radius: 50%;
@@ -111,7 +130,6 @@
       position: relative;
       animation: fadeUp 0.8s ease both;
     }
-
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(48px, 8vw, 100px);
@@ -122,12 +140,7 @@
       position: relative;
       animation: fadeUp 0.8s ease 0.1s both;
     }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
-
+    .hero-title em { font-style: italic; color: var(--gold-light); }
     .hero-subtitle {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(18px, 3vw, 28px);
@@ -138,15 +151,13 @@
       position: relative;
       animation: fadeUp 0.8s ease 0.2s both;
     }
-
+    .lang-ar .hero-subtitle { font-family: 'Noto Naskh Arabic', serif; font-style: normal; }
     .hero-divider {
-      width: 60px;
-      height: 1px;
+      width: 60px; height: 1px;
       background: var(--gold);
       margin: 0 auto 48px;
       animation: fadeUp 0.8s ease 0.3s both;
     }
-
     .hero-stats {
       display: flex;
       gap: 48px;
@@ -156,10 +167,7 @@
       animation: fadeUp 0.8s ease 0.4s both;
       margin-bottom: 56px;
     }
-
-    .hero-stat {
-      text-align: center;
-    }
+    .hero-stat { text-align: center; }
     .hero-stat-number {
       font-family: 'Cormorant Garamond', serif;
       font-size: 42px;
@@ -175,7 +183,7 @@
       color: rgba(245,240,232,0.45);
       margin-top: 6px;
     }
-
+    .lang-ar .hero-stat-label { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
     .hero-cta {
       display: inline-flex;
       align-items: center;
@@ -198,12 +206,11 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(201,168,76,0.3);
     }
+    .lang-ar .hero-cta { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
 
     /* ── SECTION COMMON ── */
     section { padding: 100px 24px; }
-
     .container { max-width: 1100px; margin: 0 auto; }
-
     .section-label {
       font-size: 11px;
       font-weight: 500;
@@ -212,7 +219,6 @@
       color: var(--gold-dark);
       margin-bottom: 16px;
     }
-
     .section-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(32px, 5vw, 56px);
@@ -221,74 +227,40 @@
       line-height: 1.1;
       margin-bottom: 24px;
     }
-
     .section-title em { font-style: italic; color: var(--green-light); }
-
     .section-body {
       font-size: 16px;
       line-height: 1.8;
       color: var(--text-mid);
       max-width: 640px;
     }
+    .lang-ar .section-body { font-family: 'Noto Naskh Arabic', serif; line-height: 2; }
 
     /* ── ABOUT ── */
     .about { background: var(--white); }
-
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
     }
-
-    .about-visual {
-      position: relative;
-      height: 480px;
-    }
-
-    .about-card {
-      position: absolute;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
+    .about-visual { position: relative; height: 480px; }
+    .about-card { position: absolute; border-radius: 4px; overflow: hidden; }
     .about-card-main {
-      width: 75%;
-      height: 75%;
+      width: 75%; height: 75%;
       top: 0; right: 0;
       background: linear-gradient(135deg, var(--green-mid) 0%, var(--green-deep) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
     }
-
     .about-card-accent {
-      width: 55%;
-      height: 45%;
+      width: 55%; height: 45%;
       bottom: 0; left: 0;
       background: var(--cream-dark);
       border: 1px solid var(--gold-light);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 24px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 8px; padding: 24px;
     }
-
-    .grape-icon {
-      font-size: 64px;
-      line-height: 1;
-    }
-
-    .about-card-accent-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 14px;
-      font-style: italic;
-      color: var(--gold-dark);
-      text-align: center;
-    }
-
     .location-tag {
       display: inline-flex;
       align-items: center;
@@ -301,14 +273,13 @@
       color: var(--gold-dark);
       margin-bottom: 24px;
     }
+    .lang-ar .location-tag { font-family: 'Noto Naskh Arabic', serif; }
 
-    /* ── PRODUCT SPECS ── */
+    /* ── SPECS ── */
     .specs { background: var(--green-deep); }
-
     .specs .section-label { color: var(--gold); }
     .specs .section-title { color: var(--cream); }
     .specs .section-title em { color: var(--gold-light); }
-
     .specs-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -319,357 +290,189 @@
       overflow: hidden;
       margin-top: 60px;
     }
-
     .spec-cell {
       padding: 36px 32px;
       background: var(--green-deep);
       transition: background 0.3s;
     }
     .spec-cell:hover { background: var(--green-mid); }
-
-    .spec-icon {
-      font-size: 28px;
-      margin-bottom: 16px;
-    }
-
+    .spec-icon { font-size: 28px; margin-bottom: 16px; }
     .spec-label {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 8px;
     }
-
+    .lang-ar .spec-label { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
     .spec-value {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      font-weight: 400;
-      color: var(--cream);
-      line-height: 1.3;
+      font-size: 22px; font-weight: 400;
+      color: var(--cream); line-height: 1.3;
     }
-
-    .spec-note {
-      font-size: 12px;
-      color: rgba(245,240,232,0.4);
-      margin-top: 4px;
-    }
+    .lang-ar .spec-value [data-lang-inline="ar"] { font-family: 'Noto Naskh Arabic', serif; font-size: 18px; }
+    .spec-note { font-size: 12px; color: rgba(245,240,232,0.4); margin-top: 4px; }
+    .lang-ar .spec-note [data-lang-inline="ar"] { font-family: 'Noto Naskh Arabic', serif; }
 
     /* ── COMMERCIAL ── */
     .commercial { background: var(--cream-dark); }
-
     .commercial-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      margin-top: 60px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; margin-top: 60px;
     }
-
     .commercial-card {
       background: var(--white);
-      border-radius: 4px;
-      padding: 40px;
+      border-radius: 4px; padding: 40px;
       border-top: 3px solid var(--gold);
     }
-
     .commercial-card-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 20px;
+      font-size: 24px; font-weight: 400;
+      color: var(--green-deep); margin-bottom: 20px;
     }
-
-    .commercial-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
+    .lang-ar .commercial-card-title { font-family: 'Noto Naskh Arabic', serif; }
+    .commercial-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .commercial-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--text-mid);
-      line-height: 1.5;
+      display: flex; align-items: flex-start;
+      gap: 12px; font-size: 14px;
+      color: var(--text-mid); line-height: 1.5;
     }
-
-    .commercial-list li::before {
-      content: '—';
-      color: var(--gold);
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .incoterm-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
+    .commercial-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+    .lang-ar .commercial-list li { font-family: 'Noto Naskh Arabic', serif; flex-direction: row-reverse; }
+    .incoterm-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
     .incoterm-badge {
       padding: 6px 14px;
       border: 1px solid var(--gold);
       border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--gold-dark);
-      letter-spacing: 0.05em;
+      font-size: 12px; font-weight: 500;
+      color: var(--gold-dark); letter-spacing: 0.05em;
     }
 
-    /* ── CERTIFICATIONS ── */
+    /* ── CERTS ── */
     .certs { background: var(--white); }
-
-    .cert-steps {
-      display: flex;
-      gap: 0;
-      margin-top: 60px;
-      position: relative;
-    }
-
+    .cert-steps { display: flex; gap: 0; margin-top: 60px; position: relative; }
     .cert-steps::before {
-      content: '';
-      position: absolute;
-      top: 28px;
-      left: 28px;
-      right: 28px;
-      height: 1px;
-      background: var(--gold-light);
+      content: ''; position: absolute;
+      top: 28px; left: 28px; right: 28px;
+      height: 1px; background: var(--gold-light);
     }
-
-    .cert-step {
-      flex: 1;
-      text-align: center;
-      padding: 0 16px;
-      position: relative;
-    }
-
+    .cert-step { flex: 1; text-align: center; padding: 0 16px; position: relative; }
     .cert-step-dot {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
+      width: 56px; height: 56px; border-radius: 50%;
       background: var(--cream-dark);
       border: 2px solid var(--gold-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 20px;
-      position: relative;
-      z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-size: 20px;
+      position: relative; z-index: 1;
     }
-
-    .cert-step-dot.done {
-      background: var(--gold);
-      border-color: var(--gold);
-    }
-
+    .cert-step-dot.done { background: var(--gold); border-color: var(--gold); }
     .cert-step-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 8px;
+      font-size: 18px; font-weight: 400;
+      color: var(--green-deep); margin-bottom: 8px;
     }
-
-    .cert-step-desc {
-      font-size: 12px;
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
+    .cert-step-desc { font-size: 12px; color: var(--text-light); line-height: 1.6; }
+    .lang-ar .cert-step-desc [data-lang-inline="ar"] { font-family: 'Noto Naskh Arabic', serif; line-height: 2; }
     .cert-step-status {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 10px;
+      display: inline-block; margin-top: 10px;
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 10px;
     }
-
+    .lang-ar .cert-step-status { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
     .status-done { background: rgba(61,107,61,0.1); color: var(--green-light); }
     .status-progress { background: rgba(201,168,76,0.15); color: var(--gold-dark); }
     .status-planned { background: rgba(122,122,122,0.1); color: var(--text-light); }
 
     /* ── CONTACT ── */
     .contact { background: var(--green-deep); }
-
     .contact .section-label { color: var(--gold); }
     .contact .section-title { color: var(--cream); }
-
     .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-      margin-top: 60px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start; margin-top: 60px;
     }
-
     .contact-intro {
-      font-size: 16px;
-      line-height: 1.8;
-      color: rgba(245,240,232,0.65);
-      margin-bottom: 40px;
+      font-size: 16px; line-height: 1.8;
+      color: rgba(245,240,232,0.65); margin-bottom: 40px;
     }
-
-    .contact-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
+    .lang-ar .contact-intro { font-family: 'Noto Naskh Arabic', serif; line-height: 2; }
+    .contact-detail { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
     .contact-detail-icon {
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
       border: 1px solid rgba(201,168,76,0.3);
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      flex-shrink: 0;
-      margin-top: 2px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0; margin-top: 2px;
     }
-
     .contact-detail-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 4px;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
     }
-
-    .contact-detail-value {
-      font-size: 15px;
-      color: var(--cream);
-      text-decoration: none;
-    }
-
+    .lang-ar .contact-detail-label { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
+    .contact-detail-value { font-size: 15px; color: var(--cream); text-decoration: none; }
     .contact-detail-value:hover { color: var(--gold-light); }
-
     .contact-form {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 4px;
-      padding: 40px;
+      border-radius: 4px; padding: 40px;
     }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
+    .form-group { margin-bottom: 20px; }
     .form-label {
-      display: block;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
+      display: block; font-size: 11px; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 8px;
     }
-
+    .lang-ar .form-label { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
     .form-input, .form-textarea, .form-select {
-      width: 100%;
-      padding: 12px 16px;
+      width: 100%; padding: 12px 16px;
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 2px;
-      color: var(--cream);
+      border-radius: 2px; color: var(--cream);
       font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      transition: border-color 0.2s;
-      outline: none;
+      font-size: 14px; transition: border-color 0.2s; outline: none;
     }
-
+    .lang-ar .form-input,
+    .lang-ar .form-textarea,
+    .lang-ar .form-select { font-family: 'Noto Naskh Arabic', serif; direction: rtl; }
     .form-input::placeholder, .form-textarea::placeholder { color: rgba(245,240,232,0.3); }
     .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--gold); }
-
     .form-textarea { height: 120px; resize: vertical; }
-
     .form-select option { background: var(--green-deep); color: var(--cream); }
-
     .form-submit {
-      width: 100%;
-      padding: 16px;
-      background: var(--gold);
-      color: var(--green-deep);
+      width: 100%; padding: 16px;
+      background: var(--gold); color: var(--green-deep);
       font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: all 0.3s;
-      margin-top: 8px;
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      border: none; border-radius: 2px;
+      cursor: pointer; transition: all 0.3s; margin-top: 8px;
     }
-    .form-submit:hover {
-      background: var(--gold-light);
-      transform: translateY(-1px);
-    }
-
-    /* WhatsApp CTA */
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .lang-ar .form-submit { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
     .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      background: #25D366;
-      color: white;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: all 0.3s;
-      margin-top: 20px;
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; background: #25D366;
+      color: white; font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 500;
+      text-decoration: none; border-radius: 2px;
+      transition: all 0.3s; margin-top: 20px;
     }
     .whatsapp-btn:hover { background: #1ebe57; transform: translateY(-2px); }
+    .lang-ar .whatsapp-btn { font-family: 'Noto Naskh Arabic', serif; }
 
     /* ── FOOTER ── */
-    footer {
-      background: #111;
-      padding: 32px 24px;
-      text-align: center;
-    }
-
-    .footer-text {
-      font-size: 12px;
-      color: rgba(255,255,255,0.25);
-      letter-spacing: 0.1em;
-    }
-
-    .footer-divider {
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-      margin: 16px auto;
-      opacity: 0.4;
-    }
+    footer { background: #111; padding: 32px 24px; text-align: center; }
+    .footer-text { font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; }
+    .lang-ar .footer-text { font-family: 'Noto Naskh Arabic', serif; letter-spacing: 0; }
+    .footer-divider { width: 40px; height: 1px; background: var(--gold); margin: 16px auto; opacity: 0.4; }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -681,10 +484,7 @@
       .cert-steps::before { display: none; }
       .hero-stats { gap: 32px; }
     }
-
-    @media (max-width: 480px) {
-      .specs-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 480px) { .specs-grid { grid-template-columns: 1fr; } }
 
     /* ── LANGUAGE SWITCHING ── */
     [data-lang] { display: none; }
@@ -692,15 +492,18 @@
     .lang-fr [data-lang-inline="fr"] { display: inline; }
     .lang-en [data-lang="en"] { display: block; }
     .lang-en [data-lang-inline="en"] { display: inline; }
+    .lang-ar [data-lang="ar"] { display: block; }
+    .lang-ar [data-lang-inline="ar"] { display: inline; }
     [data-lang-inline] { display: none; }
   </style>
 </head>
 <body class="lang-fr">
 
-  <!-- Language toggle -->
-  <div class="lang-bar">
+  <!-- Language toggle — always fixed top-right regardless of locale -->
+  <div class="lang-bar" style="right:0 !important; left:auto !important; border-bottom-left-radius:12px !important; border-bottom-right-radius:0 !important;">
     <button class="lang-btn active" onclick="setLang('fr')">FR</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" style="font-family:'Noto Naskh Arabic',serif; font-size:13px;" onclick="setLang('ar')">عربي</button>
   </div>
 
   <!-- ── HERO ── -->
@@ -712,15 +515,19 @@
     <p class="hero-eyebrow">
       <span data-lang-inline="fr">Domaine Mqam Tolba · Tiflet · Maroc</span>
       <span data-lang-inline="en">Mqam Tolba Estate · Tiflet · Morocco</span>
+      <span data-lang-inline="ar">ضيعة مقام الطلبة · تيفلت · المغرب</span>
     </p>
 
     <h1 class="hero-title">
-      Muscat<br><em>d'Italie</em>
+      <span data-lang-inline="fr">Muscat<br><em>d'Italie</em></span>
+      <span data-lang-inline="en">Italia<br><em>(Muscat)</em></span>
+      <span data-lang-inline="ar">عنب<br><em>مسكات ايطالي</em></span>
     </h1>
 
     <p class="hero-subtitle">
       <span data-lang-inline="fr">Raisin de table de qualité supérieure</span>
       <span data-lang-inline="en">Premium table grape</span>
+      <span data-lang-inline="ar">عنب مائدة من أعلى جودة</span>
     </p>
 
     <div class="hero-divider"></div>
@@ -731,6 +538,7 @@
         <div class="hero-stat-label">
           <span data-lang-inline="fr">Disponibles</span>
           <span data-lang-inline="en">Available</span>
+          <span data-lang-inline="ar">~١٠ أطنان متاحة</span>
         </div>
       </div>
       <div class="hero-stat">
@@ -738,21 +546,27 @@
         <div class="hero-stat-label">
           <span data-lang-inline="fr">Pieds de vigne</span>
           <span data-lang-inline="en">Vine plants</span>
+          <span data-lang-inline="ar">أصل كرمة</span>
+        </div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number">12</div>
+        <div class="hero-stat-label">
+          <span data-lang-inline="fr">Ans de vigne</span>
+          <span data-lang-inline="en">Year old vines</span>
+          <span data-lang-inline="ar">سنة عمر الكرمة</span>
         </div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-number">17–20°</div>
         <div class="hero-stat-label">Brix</div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-number">6 600</div>
-        <div class="hero-stat-label">m²</div>
-      </div>
     </div>
 
     <a href="#contact" class="hero-cta">
       <span data-lang-inline="fr">Nous contacter</span>
       <span data-lang-inline="en">Contact us</span>
+      <span data-lang-inline="ar">تواصل معنا</span>
       →
     </a>
   </section>
@@ -765,25 +579,35 @@
           <p class="section-label">
             <span data-lang-inline="fr">Notre exploitation</span>
             <span data-lang-inline="en">Our farm</span>
+            <span data-lang-inline="ar">ضيعتنا</span>
           </p>
           <h2 class="section-title">
             <span data-lang-inline="fr">Terroir de <em>Rabat</em></span>
             <span data-lang-inline="en">The <em>Rabat</em> terroir</span>
+            <span data-lang-inline="ar">تربة <em>الرباط</em></span>
           </h2>
 
           <div class="location-tag">
             📍
             <span data-lang-inline="fr">Mqam Tolba · Tiflet · Région Rabat-Salé-Kénitra</span>
             <span data-lang-inline="en">Mqam Tolba · Tiflet · Rabat-Salé-Kénitra Region</span>
+            <span data-lang-inline="ar">مقام الطلبة · تيفلت · جهة الرباط-سلا-القنيطرة</span>
           </div>
 
           <div data-lang="fr">
-            <p class="section-body">Notre exploitation viticole est située à Mqam Tolba, dans l'une des principales régions productrice de raisin de table au Maroc. Sur une parcelle de 6 600 m² comptant environ 900 pieds, nous cultivons le Muscat d'Italie — cépage aromatique par excellence, reconnu sur les marchés européens et moyen-orientaux pour son parfum intense et sa qualité gustative.</p>
+            <p class="section-body">Notre exploitation viticole est située à Mqam Tolba, dans l'une des principales régions productrices de raisin de table au Maroc. Sur une parcelle de 6 600 m² comptant environ 900 pieds de vigne <strong>âgés de 12 ans</strong>, nous cultivons le <strong>Muscat d'Italie</strong> — cépage aromatique par excellence, apprécié pour ses baies dorées, croquantes et généreuses, à la saveur sucrée et au délicat arôme musqué.</p>
+            <p class="section-body" style="margin-top:16px;">Riche en vitamines (A, C et groupe B), en sels minéraux (potassium, phosphore) et en antioxydants (polyphénols, flavonoïdes), il soutient le système cardiovasculaire, procure une énergie immédiate et contribue au bien-être général. Les grappes, larges et compactes, affichent un poids moyen de 700 à 1000 g avec un taux de sucre de 16 à 20° Brix.</p>
             <p class="section-body" style="margin-top:16px;">Notre récolte annuelle, estimée à environ 10 tonnes, est disponible en août–septembre. Nous ciblons les marchés marocain, européen (notamment Rungis) et africain.</p>
           </div>
           <div data-lang="en">
-            <p class="section-body">Our vineyard is located in Mqam Tolba, one of Morocco's main table grape producing regions. On a 6,600 m² plot with approximately 900 vines, we cultivate Muscat d'Italie — the most aromatic table grape variety, prized in European and Middle Eastern markets for its intense perfume and flavour.</p>
+            <p class="section-body">Our vineyard is located in Mqam Tolba, one of Morocco's main table grape producing regions. On a 6,600 m² plot with approximately 900 vines <strong>12 years old</strong>, we grow <strong>Italia (Muscat)</strong> — also known as the true Muscat, appreciated for its large, golden, crunchy berries with a sweet flavour and a delicate muscat aroma.</p>
+            <p class="section-body" style="margin-top:16px;">Rich in vitamins (A, C and B group), mineral salts (potassium, phosphorus) and antioxidants (polyphenols, flavonoids), it supports cardiovascular health, provides immediately available energy, and contributes to overall well-being. Clusters are large and compact, averaging 700–1000 g with a sugar level of 16–20° Brix.</p>
             <p class="section-body" style="margin-top:16px;">Our annual harvest, estimated at approximately 10 tonnes, is available August–September. We target Moroccan, European (Rungis MIN), and African markets.</p>
+          </div>
+          <div data-lang="ar">
+            <p class="section-body">تقع ضيعتنا الكرمية في مقام الطلبة، إحدى أبرز مناطق إنتاج عنب المائدة في المغرب. على قطعة أرض تبلغ 6600 متر مربع تضم نحو 900 أصل كرمة <strong>عمرها 12 سنة</strong>، نزرع <strong>عنب مسكات ايطالي</strong> — المعروف بالمسكات الأصيل، ويتميز بحباته الذهبية الكبيرة المقرمشة ذات النكهة الحلوة والعطر المسكي الرفيع.</p>
+            <p class="section-body" style="margin-top:16px;">غني بالفيتامينات (أ، ج، وفيتامينات ب)، والأملاح المعدنية (البوتاسيوم والفوسفور)، ومضادات الأكسدة (البوليفينول والفلافونويد)، يدعم الجهاز القلبي الوعائي، يمد الجسم بطاقة فورية، ويُسهم في الرفاهية الصحية العامة. العناقيد كبيرة وكثيفة بمتوسط وزن 700–1000 غرام ونسبة سكر 16–20° بريكس.</p>
+            <p class="section-body" style="margin-top:16px;">محصولنا السنوي المقدر بحوالي 10 أطنان متاح في أغسطس وسبتمبر. نستهدف الأسواق المغربية والأوروبية (لا سيما سوق رونجي) والأفريقية.</p>
           </div>
         </div>
 
@@ -791,7 +615,11 @@
           <div class="about-card about-card-main">
             <div style="text-align:center; padding:40px;">
               <div style="font-size:80px; line-height:1; margin-bottom:16px;">🍇</div>
-              <p style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--gold-light); font-style:italic;">Muscat d'Italie</p>
+              <p style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--gold-light); font-style:italic;">
+                <span data-lang-inline="fr">Muscat d'Italie</span>
+                <span data-lang-inline="en">Italia (Muscat)</span>
+                <span data-lang-inline="ar" style="font-family:'Noto Naskh Arabic',serif;">عنب مسكات ايطالي</span>
+              </p>
               <p style="font-size:12px; color:rgba(245,240,232,0.4); margin-top:8px; letter-spacing:0.1em;">VITIS VINIFERA</p>
             </div>
           </div>
@@ -799,9 +627,12 @@
             <div style="font-size:11px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-dark); margin-bottom:8px;">
               <span data-lang-inline="fr">Récolte</span>
               <span data-lang-inline="en">Harvest</span>
+              <span data-lang-inline="ar" style="font-family:'Noto Naskh Arabic',serif; letter-spacing:0;">موسم الحصاد</span>
             </div>
             <p style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--green-deep);">
-              Août – Sept.
+              <span data-lang-inline="fr">Août – Sept.</span>
+              <span data-lang-inline="en">Aug. – Sept.</span>
+              <span data-lang-inline="ar" style="font-family:'Noto Naskh Arabic',serif; font-size:22px;">أغسطس – سبتمبر</span>
             </p>
             <p style="font-size:11px; color:var(--text-light);" id="harvest-year"></p>
           </div>
@@ -817,10 +648,12 @@
         <p class="section-label">
           <span data-lang-inline="fr">Fiche produit</span>
           <span data-lang-inline="en">Product specs</span>
+          <span data-lang-inline="ar">مواصفات المنتج</span>
         </p>
         <h2 class="section-title">
           <span data-lang-inline="fr">Qualité & <em>Caractéristiques</em></span>
           <span data-lang-inline="en">Quality & <em>Specifications</em></span>
+          <span data-lang-inline="ar">الجودة <em>والمواصفات</em></span>
         </h2>
       </div>
 
@@ -830,11 +663,17 @@
           <div class="spec-label">
             <span data-lang-inline="fr">Variété</span>
             <span data-lang-inline="en">Variety</span>
+            <span data-lang-inline="ar">الصنف</span>
           </div>
-          <div class="spec-value">Muscat d'Italie</div>
+          <div class="spec-value">
+            <span data-lang-inline="fr">Muscat d'Italie</span>
+            <span data-lang-inline="en">Italia (Muscat)</span>
+            <span data-lang-inline="ar">مسكات ايطالي</span>
+          </div>
           <div class="spec-note">
-            <span data-lang-inline="fr">Raisin blanc à pépins</span>
-            <span data-lang-inline="en">White seeded grape</span>
+            <span data-lang-inline="fr">Raisin blanc à pépins, arôme musqué</span>
+            <span data-lang-inline="en">White seeded grape, muscat aroma</span>
+            <span data-lang-inline="ar">عنب أبيض بذري بعطر مسكي</span>
           </div>
         </div>
         <div class="spec-cell">
@@ -842,20 +681,27 @@
           <div class="spec-label">
             <span data-lang-inline="fr">Calibre</span>
             <span data-lang-inline="en">Caliber</span>
+            <span data-lang-inline="ar">الحجم</span>
           </div>
           <div class="spec-value">≥ 18 mm</div>
           <div class="spec-note">
             <span data-lang-inline="fr">Majoritairement 20–22 mm</span>
             <span data-lang-inline="en">Mostly 20–22 mm</span>
+            <span data-lang-inline="ar">غالباً 20–22 مم</span>
           </div>
         </div>
         <div class="spec-cell">
           <div class="spec-icon">🧪</div>
-          <div class="spec-label">Brix</div>
+          <div class="spec-label">
+            <span data-lang-inline="fr">Brix</span>
+            <span data-lang-inline="en">Brix</span>
+            <span data-lang-inline="ar">درجة السكر (بريكس)</span>
+          </div>
           <div class="spec-value">17 – 20°</div>
           <div class="spec-note">
             <span data-lang-inline="fr">Teneur en sucre à maturité</span>
             <span data-lang-inline="en">Sugar content at harvest</span>
+            <span data-lang-inline="ar">نسبة السكر عند النضج</span>
           </div>
         </div>
         <div class="spec-cell">
@@ -863,23 +709,35 @@
           <div class="spec-label">
             <span data-lang-inline="fr">Catégorie</span>
             <span data-lang-inline="en">Grade</span>
+            <span data-lang-inline="ar">الفئة</span>
           </div>
-          <div class="spec-value">Extra / Classe I</div>
+          <div class="spec-value">
+            <span data-lang-inline="fr">Extra / Classe I</span>
+            <span data-lang-inline="en">Extra / Class I</span>
+            <span data-lang-inline="ar">ممتاز / الفئة الأولى</span>
+          </div>
           <div class="spec-note">
             <span data-lang-inline="fr">Norme UNECE FFV-19</span>
             <span data-lang-inline="en">UNECE FFV-19 standard</span>
+            <span data-lang-inline="ar">معيار UNECE FFV-19</span>
           </div>
         </div>
         <div class="spec-cell">
           <div class="spec-icon">📦</div>
           <div class="spec-label">
-            <span data-lang-inline="fr">Conditionnement</span>
-            <span data-lang-inline="en">Packaging</span>
+            <span data-lang-inline="fr">Grappe</span>
+            <span data-lang-inline="en">Cluster</span>
+            <span data-lang-inline="ar">العنقود</span>
           </div>
-          <div class="spec-value">4.5 kg / 5 kg</div>
+          <div class="spec-value">
+            <span data-lang-inline="fr">700–1000 g</span>
+            <span data-lang-inline="en">700–1000 g</span>
+            <span data-lang-inline="ar">700–1000 غرام</span>
+          </div>
           <div class="spec-note">
-            <span data-lang-inline="fr">Cageots ou cartons export</span>
-            <span data-lang-inline="en">Crates or export cartons</span>
+            <span data-lang-inline="fr">Grande, compacte, ellipsoïdale</span>
+            <span data-lang-inline="en">Large, compact, ellipsoidal</span>
+            <span data-lang-inline="ar">كبير، كثيف، بيضاوي</span>
           </div>
         </div>
         <div class="spec-cell">
@@ -887,20 +745,35 @@
           <div class="spec-label">
             <span data-lang-inline="fr">Origine</span>
             <span data-lang-inline="en">Origin</span>
+            <span data-lang-inline="ar">المنشأ</span>
           </div>
-          <div class="spec-value">Maroc</div>
-          <div class="spec-note">Mqam Tolba, Tiflet</div>
+          <div class="spec-value">
+            <span data-lang-inline="fr">Maroc</span>
+            <span data-lang-inline="en">Morocco</span>
+            <span data-lang-inline="ar">المغرب</span>
+          </div>
+          <div class="spec-note">
+            <span data-lang-inline="fr">Mqam Tolba, Tiflet</span>
+            <span data-lang-inline="en">Mqam Tolba, Tiflet</span>
+            <span data-lang-inline="ar">مقام الطلبة، تيفلت</span>
+          </div>
         </div>
         <div class="spec-cell">
           <div class="spec-icon">❄️</div>
           <div class="spec-label">
             <span data-lang-inline="fr">Conservation</span>
             <span data-lang-inline="en">Storage</span>
+            <span data-lang-inline="ar">التخزين</span>
           </div>
-          <div class="spec-value">0 – 2°C</div>
+          <div class="spec-value">
+            <span data-lang-inline="fr">0 – 2°C</span>
+            <span data-lang-inline="en">0 – 2°C</span>
+            <span data-lang-inline="ar">0 – 2 درجة مئوية</span>
+          </div>
           <div class="spec-note">
             <span data-lang-inline="fr">Chaîne du froid maintenue</span>
             <span data-lang-inline="en">Cold chain maintained</span>
+            <span data-lang-inline="ar">سلسلة التبريد مضمونة</span>
           </div>
         </div>
         <div class="spec-cell">
@@ -908,23 +781,35 @@
           <div class="spec-label">
             <span data-lang-inline="fr">Disponibilité</span>
             <span data-lang-inline="en">Availability</span>
+            <span data-lang-inline="ar">التوفر</span>
           </div>
           <div class="spec-value">
             <span data-lang-inline="fr">Août – Septembre</span>
             <span data-lang-inline="en">August – September</span>
-          </div>
-          <div class="spec-note">~10 tonnes</div>
-        </div>
-        <div class="spec-cell">
-          <div class="spec-icon">🧴</div>
-          <div class="spec-label">SO₂</div>
-          <div class="spec-value">
-            <span data-lang-inline="fr">Disponible</span>
-            <span data-lang-inline="en">Available</span>
+            <span data-lang-inline="ar">أغسطس – سبتمبر</span>
           </div>
           <div class="spec-note">
-            <span data-lang-inline="fr">Sachets générateurs sur demande</span>
-            <span data-lang-inline="en">Generator pads on request</span>
+            <span data-lang-inline="fr">~10 tonnes · 4.5 kg / 5 kg</span>
+            <span data-lang-inline="en">~10 tonnes · 4.5 kg / 5 kg</span>
+            <span data-lang-inline="ar">~١٠ أطنان · صناديق 4.5 أو 5 كغ</span>
+          </div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-icon">🌸</div>
+          <div class="spec-label">
+            <span data-lang-inline="fr">Arôme</span>
+            <span data-lang-inline="en">Flavour</span>
+            <span data-lang-inline="ar">الطعم والعطر</span>
+          </div>
+          <div class="spec-value">
+            <span data-lang-inline="fr">Fruité, musqué</span>
+            <span data-lang-inline="en">Fruity, muscat</span>
+            <span data-lang-inline="ar">فاكهي، مسكي</span>
+          </div>
+          <div class="spec-note">
+            <span data-lang-inline="fr">Arôme prononcé, saveur sucrée</span>
+            <span data-lang-inline="en">Pronounced aroma, sweet taste</span>
+            <span data-lang-inline="ar">عطر قوي، طعم حلو مميز</span>
           </div>
         </div>
       </div>
@@ -938,10 +823,12 @@
         <p class="section-label">
           <span data-lang-inline="fr">Conditions commerciales</span>
           <span data-lang-inline="en">Commercial terms</span>
+          <span data-lang-inline="ar">الشروط التجارية</span>
         </p>
         <h2 class="section-title">
           <span data-lang-inline="fr"><em>Export</em> & Marchés</span>
           <span data-lang-inline="en"><em>Export</em> & Markets</span>
+          <span data-lang-inline="ar"><em>التصدير</em> والأسواق</span>
         </h2>
       </div>
 
@@ -950,23 +837,28 @@
           <h3 class="commercial-card-title">
             <span data-lang-inline="fr">Marchés ciblés</span>
             <span data-lang-inline="en">Target markets</span>
+            <span data-lang-inline="ar">الأسواق المستهدفة</span>
           </h3>
           <ul class="commercial-list">
             <li>
               <span data-lang-inline="fr">Marché local marocain — grande distribution (Marjane, Label'Vie, Aswak)</span>
               <span data-lang-inline="en">Moroccan local market — supermarket chains (Marjane, Label'Vie, Aswak)</span>
+              <span data-lang-inline="ar">السوق المحلي المغربي — سلاسل التوزيع الكبرى (مرجان، لابيل في، أسواق السلام)</span>
             </li>
             <li>
               <span data-lang-inline="fr">Europe — Rungis MIN Paris, grossistes France, Pays-Bas, Belgique</span>
               <span data-lang-inline="en">Europe — Rungis MIN Paris, wholesalers in France, Netherlands, Belgium</span>
+              <span data-lang-inline="ar">أوروبا — سوق رونجي باريس، تجار الجملة في فرنسا وهولندا وبلجيكا</span>
             </li>
             <li>
               <span data-lang-inline="fr">Moyen-Orient — importateurs UAE, Arabie Saoudite, Qatar</span>
               <span data-lang-inline="en">Middle East — importers UAE, Saudi Arabia, Qatar</span>
+              <span data-lang-inline="ar">الشرق الأوسط — مستوردون في الإمارات والسعودية وقطر</span>
             </li>
             <li>
               <span data-lang-inline="fr">Afrique subsaharienne — exportateurs Maroc vers Dakar, Abidjan</span>
               <span data-lang-inline="en">Sub-Saharan Africa — Moroccan exporters to Dakar, Abidjan</span>
+              <span data-lang-inline="ar">أفريقيا جنوب الصحراء — مصدرون مغاربة نحو داكار وأبيدجان</span>
             </li>
           </ul>
         </div>
@@ -975,23 +867,28 @@
           <h3 class="commercial-card-title">
             <span data-lang-inline="fr">Conditions de vente</span>
             <span data-lang-inline="en">Sales terms</span>
+            <span data-lang-inline="ar">شروط البيع</span>
           </h3>
           <ul class="commercial-list">
             <li>
               <span data-lang-inline="fr">Prix négociable selon volume, qualité et Incoterm</span>
               <span data-lang-inline="en">Price negotiable based on volume, quality and Incoterm</span>
+              <span data-lang-inline="ar">السعر قابل للتفاوض حسب الكمية والجودة وشروط التسليم</span>
             </li>
             <li>
               <span data-lang-inline="fr">Visite de l'exploitation possible sur rendez-vous</span>
               <span data-lang-inline="en">Farm visit available by appointment</span>
+              <span data-lang-inline="ar">زيارة الضيعة متاحة بموعد مسبق</span>
             </li>
             <li>
               <span data-lang-inline="fr">Échantillons disponibles avant commande</span>
               <span data-lang-inline="en">Samples available before order</span>
+              <span data-lang-inline="ar">عينات متاحة قبل الطلب</span>
             </li>
             <li>
               <span data-lang-inline="fr">Partenariats acheteurs, conditionneurs et exportateurs bienvenus</span>
               <span data-lang-inline="en">Open to partnerships with buyers, packers and exporters</span>
+              <span data-lang-inline="ar">نرحب بالشراكات مع المشترين والمكيّفين والمصدّرين</span>
             </li>
           </ul>
           <div style="margin-top:24px;">
@@ -1015,10 +912,12 @@
         <p class="section-label">
           <span data-lang-inline="fr">Conformité & certifications</span>
           <span data-lang-inline="en">Compliance & certifications</span>
+          <span data-lang-inline="ar">المطابقة والشهادات</span>
         </p>
         <h2 class="section-title">
           <span data-lang-inline="fr">Notre <em>démarche qualité</em></span>
           <span data-lang-inline="en">Our <em>quality approach</em></span>
+          <span data-lang-inline="ar">نهجنا <em>في الجودة</em></span>
         </h2>
       </div>
 
@@ -1029,10 +928,12 @@
           <p class="cert-step-desc">
             <span data-lang-inline="fr">Enregistrement exploitation agricole auprès de l'autorité sanitaire marocaine</span>
             <span data-lang-inline="en">Farm registration with Moroccan food safety authority</span>
+            <span data-lang-inline="ar">تسجيل الضيعة لدى السلطة الصحية المغربية</span>
           </p>
           <span class="cert-step-status status-progress">
             <span data-lang-inline="fr">En cours</span>
             <span data-lang-inline="en">In progress</span>
+            <span data-lang-inline="ar">جارٍ</span>
           </span>
         </div>
 
@@ -1042,10 +943,12 @@
           <p class="cert-step-desc">
             <span data-lang-inline="fr">Certification internationale de bonnes pratiques agricoles — exigée par les acheteurs européens</span>
             <span data-lang-inline="en">International Good Agricultural Practices certification — required by European buyers</span>
+            <span data-lang-inline="ar">شهادة دولية لممارسات الزراعة الجيدة — مطلوبة من المشترين الأوروبيين</span>
           </p>
           <span class="cert-step-status status-progress">
             <span data-lang-inline="fr">En cours</span>
             <span data-lang-inline="en">In progress</span>
+            <span data-lang-inline="ar">جارٍ</span>
           </span>
         </div>
 
@@ -1054,14 +957,17 @@
           <h4 class="cert-step-title">
             <span data-lang-inline="fr">Analyse LMR</span>
             <span data-lang-inline="en">MRL Analysis</span>
+            <span data-lang-inline="ar">تحليل بقايا المبيدات</span>
           </h4>
           <p class="cert-step-desc">
             <span data-lang-inline="fr">Test des résidus de pesticides conforme aux limites maximales UE</span>
             <span data-lang-inline="en">Pesticide residue testing compliant with EU maximum residue limits</span>
+            <span data-lang-inline="ar">فحص بقايا المبيدات وفق الحدود القصوى الأوروبية</span>
           </p>
           <span class="cert-step-status status-planned">
             <span data-lang-inline="fr">Prévu avant export</span>
             <span data-lang-inline="en">Planned pre-export</span>
+            <span data-lang-inline="ar">مقرر قبل التصدير</span>
           </span>
         </div>
 
@@ -1070,14 +976,17 @@
           <h4 class="cert-step-title">
             <span data-lang-inline="fr">Certificat phytosanitaire</span>
             <span data-lang-inline="en">Phytosanitary certificate</span>
+            <span data-lang-inline="ar">شهادة صحة النبات</span>
           </h4>
           <p class="cert-step-desc">
             <span data-lang-inline="fr">Délivré par l'ONSSA à chaque expédition — obligatoire pour l'entrée en UE</span>
             <span data-lang-inline="en">Issued by ONSSA per shipment — mandatory for EU entry</span>
+            <span data-lang-inline="ar">تصدرها ONSSA لكل شحنة — إلزامية للدخول إلى الاتحاد الأوروبي</span>
           </p>
           <span class="cert-step-status status-planned">
             <span data-lang-inline="fr">Par expédition</span>
             <span data-lang-inline="en">Per shipment</span>
+            <span data-lang-inline="ar">لكل شحنة</span>
           </span>
         </div>
       </div>
@@ -1091,20 +1000,25 @@
         <p class="section-label">
           <span data-lang-inline="fr">Nous écrire</span>
           <span data-lang-inline="en">Get in touch</span>
+          <span data-lang-inline="ar">تواصل معنا</span>
         </p>
         <h2 class="section-title">
           <span data-lang-inline="fr">Intéressé par notre <em>récolte ?</em></span>
           <span data-lang-inline="en">Interested in our <em>harvest?</em></span>
+          <span data-lang-inline="ar">مهتم بـ<em>محصولنا؟</em></span>
         </h2>
       </div>
 
-      <div class="contact-grid reveal">
+      <div class="contact-grid reveal" style="grid-template-columns: 1fr; max-width: 600px;">
         <div>
           <div data-lang="fr">
             <p class="contact-intro">Nous sommes ouverts à tout partenariat sérieux — acheteurs locaux, exportateurs, conditionneurs, importateurs européens. Contactez-nous pour recevoir notre fiche produit complète ou pour convenir d'une visite de l'exploitation.</p>
           </div>
           <div data-lang="en">
             <p class="contact-intro">We welcome serious partnerships — local buyers, exporters, packers, European importers. Contact us to receive our full product sheet or to arrange a farm visit.</p>
+          </div>
+          <div data-lang="ar">
+            <p class="contact-intro">نرحب بأي شراكة جادة — مشترون محليون، مصدّرون، مكيّفون، مستوردون أوروبيون. تواصل معنا للحصول على بطاقة المنتج الكاملة أو لترتيب زيارة الضيعة.</p>
           </div>
 
           <div class="contact-detail">
@@ -1113,27 +1027,17 @@
               <p class="contact-detail-label">
                 <span data-lang-inline="fr">Adresse</span>
                 <span data-lang-inline="en">Address</span>
+                <span data-lang-inline="ar">العنوان</span>
               </p>
               <p class="contact-detail-value">Mqam Tolba, Tiflet<br>Région Rabat-Salé-Kénitra, Maroc</p>
             </div>
           </div>
 
           <div class="contact-detail">
-            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-icon">💬</div>
             <div>
-              <p class="contact-detail-label">
-                <span data-lang-inline="fr">Téléphone</span>
-                <span data-lang-inline="en">Phone</span>
-              </p>
-              <a href="https://wa.me/212710825405" class="contact-detail-value">WhatsApp: +212 710 825 405</a>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">✉️</div>
-            <div>
-              <p class="contact-detail-label">Email</p>
-              <a href="mailto:contact@muscat.ma" class="contact-detail-value">contact@muscat.ma</a>
+              <p class="contact-detail-label">WhatsApp</p>
+              <a href="https://wa.me/212710825405" class="contact-detail-value" dir="ltr">+212 710 825 405</a>
             </div>
           </div>
 
@@ -1141,14 +1045,17 @@
             💬
             <span data-lang-inline="fr">Contacter via WhatsApp</span>
             <span data-lang-inline="en">Contact via WhatsApp</span>
+            <span data-lang-inline="ar">تواصل عبر واتساب</span>
           </a>
         </div>
 
-        <div class="contact-form">
+        <!-- Contact form hidden until email is functional -->
+        <div style="display:none">
           <div class="form-group">
             <label class="form-label">
               <span data-lang-inline="fr">Nom / Société</span>
               <span data-lang-inline="en">Name / Company</span>
+              <span data-lang-inline="ar">الاسم / الشركة</span>
             </label>
             <input type="text" class="form-input" placeholder="ex: Jean Dupont — BFI Rungis">
           </div>
@@ -1162,29 +1069,34 @@
             <label class="form-label">
               <span data-lang-inline="fr">Vous êtes</span>
               <span data-lang-inline="en">You are</span>
+              <span data-lang-inline="ar">أنت</span>
             </label>
             <select class="form-select">
-              <option value="" disabled selected>
-              </option>
+              <option value="" disabled selected></option>
               <option>
                 <span data-lang-inline="fr">Importateur / Grossiste</span>
                 <span data-lang-inline="en">Importer / Wholesaler</span>
+                <span data-lang-inline="ar">مستورد / تاجر جملة</span>
               </option>
               <option>
                 <span data-lang-inline="fr">Exportateur / Conditionneur</span>
                 <span data-lang-inline="en">Exporter / Packer</span>
+                <span data-lang-inline="ar">مصدّر / مكيّف</span>
               </option>
               <option>
                 <span data-lang-inline="fr">Grande distribution</span>
                 <span data-lang-inline="en">Retail chain</span>
+                <span data-lang-inline="ar">تجزئة كبرى</span>
               </option>
               <option>
                 <span data-lang-inline="fr">Courtier / Agent</span>
                 <span data-lang-inline="en">Broker / Agent</span>
+                <span data-lang-inline="ar">وسيط / وكيل</span>
               </option>
               <option>
                 <span data-lang-inline="fr">Autre</span>
                 <span data-lang-inline="en">Other</span>
+                <span data-lang-inline="ar">أخرى</span>
               </option>
             </select>
           </div>
@@ -1193,6 +1105,7 @@
             <label class="form-label">
               <span data-lang-inline="fr">Message</span>
               <span data-lang-inline="en">Message</span>
+              <span data-lang-inline="ar">الرسالة</span>
             </label>
             <textarea class="form-textarea" placeholder="Volume souhaité, marché cible, Incoterm préféré..."></textarea>
           </div>
@@ -1200,6 +1113,7 @@
           <button class="form-submit" onclick="handleSubmit()">
             <span data-lang-inline="fr">Envoyer la demande</span>
             <span data-lang-inline="en">Send enquiry</span>
+            <span data-lang-inline="ar">إرسال الطلب</span>
           </button>
         </div>
       </div>
@@ -1208,17 +1122,17 @@
 
   <!-- ── FOOTER ── -->
   <footer>
-    <p class="footer-text">Domaine Mqam Tolba · Muscat d'Italie · Maroc</p>
+    <p class="footer-text">Domaine Mqam Tolba · Italia (Muscat) · muscat.ma</p>
     <div class="footer-divider"></div>
     <p class="footer-text">
       <span data-lang-inline="fr">Mqam Tolba, Tiflet, Région Rabat-Salé-Kénitra</span>
       <span data-lang-inline="en">Mqam Tolba, Tiflet, Rabat-Salé-Kénitra Region</span>
+      <span data-lang-inline="ar">مقام الطلبة، تيفلت، جهة الرباط-سلا-القنيطرة</span>
     </p>
   </footer>
 
   <script>
-    // Dynamic harvest year — auto-updates every year
-    // Logic: if current month is October or later, show next year as harvest year
+    // Dynamic harvest year
     const now = new Date();
     const harvestYear = now.getMonth() >= 9 ? now.getFullYear() + 1 : now.getFullYear();
     const el = document.getElementById('harvest-year');
@@ -1226,8 +1140,10 @@
 
     // Language switching
     function setLang(lang) {
-      document.body.classList.remove('lang-fr', 'lang-en');
+      document.body.classList.remove('lang-fr', 'lang-en', 'lang-ar');
       document.body.classList.add('lang-' + lang);
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
     }
@@ -1244,13 +1160,16 @@
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
 
-    // Form submit (demo)
+    // Form submit
     function handleSubmit() {
       const btn = document.querySelector('.form-submit');
-      btn.textContent = '✓ Envoyé !';
+      const lang = document.body.classList.contains('lang-en') ? 'en' : document.body.classList.contains('lang-ar') ? 'ar' : 'fr';
+      const messages = { fr: '✓ Envoyé !', en: '✓ Sent!', ar: '✓ تم الإرسال!' };
+      const originals = { fr: 'Envoyer la demande', en: 'Send enquiry', ar: 'إرسال الطلب' };
+      btn.textContent = messages[lang];
       btn.style.background = '#3D6B3D';
       setTimeout(() => {
-        btn.textContent = document.body.classList.contains('lang-en') ? 'Send enquiry' : 'Envoyer la demande';
+        btn.innerHTML = `<span data-lang-inline="fr">Envoyer la demande</span><span data-lang-inline="en">Send enquiry</span><span data-lang-inline="ar">إرسال الطلب</span>`;
         btn.style.background = '';
       }, 3000);
     }
